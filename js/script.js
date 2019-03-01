@@ -1,7 +1,9 @@
+
+
 $(document).ready(function(){
- $("#startbtn").click(function(){
- alert("This isnt working");
- });
+  $("#startbtn").click(function(){
+  alert("This isnt working");
+  });
 });
 /*function Player(name,score,roundTotal,totalScore){
    this.name = name;
