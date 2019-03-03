@@ -9,7 +9,7 @@ function Player(name,score,roundTotal,totalScore){
  var player2 ="";
 
  function diceRoll(){
-   Math.floor((Math.random()*6)+1);
+   return Math.floor((Math.random()*6)+1);
  };
 $(document).ready(function(){
   player1 = new Player;
@@ -21,10 +21,10 @@ $(document).ready(function(){
   $("#name1Out").text(player1.name);
   $("#name2Out").text(player2.name);
   });
-  $("#player1Roll").click(function(){
+  $("#player1Roll").click(function(event){
      player1.score = diceRoll();
      
-     $("#scoreOtput").text(player1.score);
+     $("#scoreOutput").text(player1.score);
      
   });
 });
