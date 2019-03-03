@@ -1,15 +1,20 @@
-function Player(name,score,roundTotal,totalScore){
+function Player(name,){
    this.name = name;
-   this.score = score;
-   this.roundTotal = roundTotal;
-   this.totalScore = totalScore;
+   this.score = 0;
+   this.roundTotal = 0;
+   this.totalScore = 0;
  };
 
  var player1 ="";
  var player2 ="";
 
  function diceRoll(){
-   return Math.floor((Math.random()*6)+1);
+   return Math.floor((Math.random()*6)+1);   
+ };
+
+ Player.prototype.roll = function(){
+   
+  this.roundTotal += this.score;
  };
 $(document).ready(function(){
   player1 = new Player;
@@ -22,9 +27,10 @@ $(document).ready(function(){
   $("#name2Out").text(player2.name);
   });
   $("#player1Roll").click(function(event){
-     player1.score = diceRoll();
-     
+     player1.score = diceRoll(); 
+     player1.roll();
      $("#scoreOutput").text(player1.score);
+     $("#roundOutput").text(player1.roundTotal);
      
   });
 });
