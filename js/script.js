@@ -26,11 +26,17 @@ $(document).ready(function(){
   $("#name1Out").text(player1.name);
   $("#name2Out").text(player2.name);
   });
-  $("#player1Roll").click(function(event){
+  $("#player1Roll").click(function(){
      player1.score = diceRoll(); 
      player1.roll();
      $("#scoreOutput").text(player1.score);
      $("#roundOutput").text(player1.roundTotal);
      
+  });
+  $(document).click(function(){
+    player2.score = diceRoll();
+    player2.roll();
+    $("#score2").text(player2.score);
+    $("#round2").text(player2.roundTotal);
   });
 });
