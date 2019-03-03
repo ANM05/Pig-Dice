@@ -1,0 +1,11 @@
+.dice-icon img{
+    height: 4rem;
+}
+
+.landing{
+background-image: url(../images/back.jpg)
+}
+.landing img{
+    max-width: 100%;
+    max-height: 100%;
+}
