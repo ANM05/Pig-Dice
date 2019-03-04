@@ -25,7 +25,7 @@ CSS
 Javascript
 
 ## Support and contact details
-Incase of any issues do not hesitate to contact: antonynganga05@gmail.com
+Incase of any issues do not hesitate to contact: antonynganga05@gmail.com. 
 Also feel free to contribute to the project if you have a great idea that you think can be added onto the game.
 
 Copyright (c) 2019 By Antony Maina

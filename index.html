@@ -34,29 +34,33 @@
       <div class="row" id="play-area">
         <div class="col-md-6" id="player1Area">
           <h2>Player: <span id="name1Out"></span></h2> 
+          <div class="field">
           <p>Score: <span id="scoreOutput"></span></p>         
           <p>Round score: <span id="roundOutput"></span></p>
           <p>Total score: <span id="totalOutput"></span></p>
-          <button type="button" id="player1Roll" class="btn btn-outline-success">ROLL!</button>
-          <button type="button" id="player1Hold" class="btn btn-outline-warning">HOLD!</button>
+          <button type="button" id="player1Roll" class="btn btn-outline-success btn-lg">ROLL!</button>
+          <button type="button" id="player1Hold" class="btn btn-outline-warning btn-lg">HOLD!</button>
+        </div>
           <br>
           <br>
           <div id="message1"></div>
         </div>
-        <div class="col-md-6">
-          <h2>Player: <span id="name2Out"></span></h2> 
+        <div class="col-md-6" id="player2Area">
+          <h2>Player: <span id="name2Out"></span></h2>
+          <div class="field"> 
           <p>Score: <span id="score2"></span></p>         
           <p>Round score: <span id="round2"></span></p>
           <p>Total score: <span id="total2"></span></p>
-          <button type="button" id="player2Roll" class="btn btn-outline-success">ROLL!</button>
-          <button type="button" id="player2Hold" class="btn btn-outline-warning">HOLD!</button>
+          <button type="button" id="player2Roll" class="btn btn-outline-success btn-lg">ROLL!</button>
+          <button type="button" id="player2Hold" class="btn btn-outline-warning btn-lg">HOLD!</button>
+          </div>
           <br>
           <br>
           <div id="message2"></div>
         </div>        
       </div>
       <div id="newGame">
-      <button type="reset" class="btn btn-outline-danger" id="reset">New Game</button>
+      <button type="reset" class="btn btn-outline-danger btn-lg" id="reset">New Game</button>
       </div>
     </div>
   </body>
