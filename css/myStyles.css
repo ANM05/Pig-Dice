@@ -25,3 +25,6 @@ background-image: url(../images/back.jpg)
 #newGame{
     text-align: left;
 }
+.dice-icon{
+    color: aliceblue;
+}
