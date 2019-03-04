@@ -51,12 +51,18 @@ Player.prototype.hold2 = function(){
   $("#player1Roll").show();
   return this.totalScore+=this.roundTotal;  
 }
+function resetGame(){
 
+$("#name1Out").empty();
+$("#name2Out").empty();
+document.getElementById("formInput").reset();
+};
 
 $(document).ready(function(){
   player1 = new Player;
   player2 = new Player;  
-  $("#startbtn").click(function(){  
+  $("#formInput").submit(function(event){
+    event.preventDefault();  
   player1.name = $("input#player1Name").val();
   player2.name =$("input#player2Name").val();
   $("#name1Out").text(player1.name);
@@ -87,4 +93,7 @@ $(document).ready(function(){
    player2.hold2();
    $("#total2").text(player2.totalScore);
   });
+  $("#reset").click(function(){
+    resetGame();
+  })
 });
