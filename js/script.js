@@ -55,7 +55,7 @@ $(document).ready(function(){
      player1.roll1();
      $("#scoreOutput").text(player1.score);
      $("#roundOutput").text(player1.roundTotal);
-     $("#totalOutput").text(player1.roundTotal);
+     $("#totalOutput").text(player1.totalScore);
      
   });
   $("#player2Roll").click(function(){
