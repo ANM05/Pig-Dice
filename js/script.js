@@ -14,27 +14,31 @@ function Player(name,){
 
  Player.prototype.roll1 = function(){ 
    if(this.score!==1) {
-  this.roundTotal += this.score;  
+  this.roundTotal += this.score;
+  $("#message2").empty();   
    }
     else{
       this.roundTotal = 0;
       this.roundTotal = 0;
      $("#player1Roll").hide();
      $("#player2Roll").show();
-     $("#message1").text("Oops!! you rolled a ONE!!");     
+     $("#message1").text("Oops!! you rolled a ONE!!");
+         
    }
  };
 
  Player.prototype.roll2 = function(){ 
   if(this.score!==1) {
- this.roundTotal += this.score;  
+ this.roundTotal += this.score; 
+ $("#message1").empty();  
   }
    else{
      this.roundTotal = 0;
      this.totalScore = 0;
     $("#player2Roll").hide();
     $("#player1Roll").show();
-    $("#message2").text("Oops!! you rolled a ONE!!");     
+    $("#message2").text("Oops!! you rolled a ONE!!");  
+      
   } 
 };
 
