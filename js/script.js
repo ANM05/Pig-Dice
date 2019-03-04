@@ -24,7 +24,7 @@ function Player(name,){
      $("#player2Roll").show();
      $("#message1").text("Oops!! you rolled a ONE!!");
          
-   }
+   };
  };
 
  Player.prototype.roll2 = function(){ 
@@ -39,29 +39,32 @@ function Player(name,){
     $("#player1Roll").show();
     $("#message2").text("Oops!! you rolled a ONE!!");  
       
-  } 
+  }; 
 };
 
 Player.prototype.hold1 = function(){
   $("#player2Roll").show();  
   this.totalScore+=this.roundTotal; 
   this.roundTotal-=this.roundTotal; 
-}
+};
 
 Player.prototype.hold2 = function(){
   $("#player1Roll").show();
   this.totalScore+=this.roundTotal; 
   this.roundTotal-=this.roundTotal;   
-}
+};
 function resetGame(){
-
+  player1 = new Player;
+  player2 = new Player; 
 $("#name1Out").empty();
 $("#name2Out").empty();
 document.getElementById("formInput").reset();
-this.score = 0;
-this.roundTotal = 0;
-this.totalScore = 0;
-
+$("#scoreOutput").empty();
+$("#roundOutput").empty();
+$("#totalOutput").empty();
+$("#score2").empty();
+$("#round2").empty();
+$("#total2").empty();
 };
 
 $(document).ready(function(){
