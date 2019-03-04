@@ -53,9 +53,7 @@ Player.prototype.hold2 = function(){
   this.totalScore+=this.roundTotal; 
   this.roundTotal-=this.roundTotal;   
 };
-function resetGame(){
-  player1 = new Player;
-  player2 = new Player; 
+function resetGame(){  
 $("#name1Out").empty();
 $("#name2Out").empty();
 document.getElementById("formInput").reset();
@@ -66,6 +64,15 @@ $("#score2").empty();
 $("#round2").empty();
 $("#total2").empty();
 };
+
+Player.prototype.winner = function(){
+  if(this.totalScore>=100){
+    alert("Congratulations you are the winner");
+  }
+  else{
+
+  }
+}
 
 $(document).ready(function(){
   player1 = new Player;
