@@ -43,19 +43,25 @@ function Player(name,){
 };
 
 Player.prototype.hold1 = function(){
-  $("#player2Roll").show();
-  return this.totalScore+=this.roundTotal;  
+  $("#player2Roll").show();  
+  this.totalScore+=this.roundTotal; 
+  this.roundTotal-=this.roundTotal; 
 }
 
 Player.prototype.hold2 = function(){
   $("#player1Roll").show();
-  return this.totalScore+=this.roundTotal;  
+  this.totalScore+=this.roundTotal; 
+  this.roundTotal-=this.roundTotal;   
 }
 function resetGame(){
 
 $("#name1Out").empty();
 $("#name2Out").empty();
 document.getElementById("formInput").reset();
+this.score = 0;
+this.roundTotal = 0;
+this.totalScore = 0;
+
 };
 
 $(document).ready(function(){
